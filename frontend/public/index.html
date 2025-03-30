@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locked Liquidity</title>
+    <link rel="stylesheet" href="styles/App.css">
+    <style>
+        /* App.css */
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #2c3e50;
+            --background-color: #f5f6fa;
+            --text-color: #2c3e50;
+            --border-radius: 8px;
+            --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        #root {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: 500;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 16px;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+
+        #remaining-liquidity {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 600px) {
+            #root {
+                padding: 10px;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <h1>Locked Liquidity Management</h1>
+
+        <!-- Lock Liquidity Section -->
+        <section id="lock-liquidity">
+            <h2>Lock Liquidity</h2>
+            <form id="lock-liquidity-form">
+                <label for="lock-amount">Amount to Lock:</label>
+                <input type="number" id="lock-amount" name="lock-amount" required>
+                <button type="submit">Lock Liquidity</button>
+            </form>
+        </section>
+
+        <!-- Withdraw Liquidity Section -->
+        <section id="withdraw-liquidity">
+            <h2>Withdraw Liquidity</h2>
+            <button id="withdraw-button">Withdraw 10%</button>
+        </section>
+
+        <!-- Check Remaining Liquidity Section -->
+        <section id="check-liquidity">
+            <h2>Check Remaining Liquidity</h2>
+            <button id="check-liquidity-button">Check Liquidity</button>
+            <p id="remaining-liquidity">Remaining Liquidity: --</p>
+        </section>
+
+        <!-- Set Withdrawal Percentage Section -->
+        <section id="set-percentage">
+            <h2>Set Withdrawal Percentage</h2>
+            <form id="set-percentage-form">
+                <label for="withdraw-percentage">Withdrawal Percentage:</label>
+                <input type="number" id="withdraw-percentage" name="withdraw-percentage" min="1" max="100" required>
+                <button type="submit">Set Percentage</button>
+            </form>
+        </section>
+    </div>
+
+    <script type="module" src="../src/index.tsx"></script>
+</body>
+
+</html>

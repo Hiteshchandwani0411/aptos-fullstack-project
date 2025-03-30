@@ -1,0 +1,30 @@
+{
+  "name": "aptos-fullstack-project",
+  "version": "1.0.0",
+  "description": "A full-stack project integrating Aptos blockchain with a React frontend.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@aptos-labs/ts-sdk": "^1.18.1",
+    "@aptos-labs/wallet-adapter-ant-design": "^3.0.2",
+    "@aptos-labs/wallet-adapter-react": "^3.5.2",
+    "antd": "^5.19.3",
+    "aptos": "^1.21.0",
+    "petra-plugin-wallet-adapter": "^0.4.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.2",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2"
+  },
+  "homepage": ".",
+  "license": "MIT"
+}
